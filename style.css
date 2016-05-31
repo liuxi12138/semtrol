@@ -1,0 +1,116 @@
+/*
+Theme Name: semtrol
+Author: 刘熹
+Author URI: http://youthliuxi.cn/
+Description: 程序支持：刘熹；美工支持：张庆玲
+Version: 0.1
+*/
+
+*{margin:0 auto;padding:0 auto;}
+img{width:100%;height:auto;}
+div,ul,li{height: 100%;}
+a:hover{color:#8e8e8e;text-decoration: none;}
+li a{font-size:24px;color:#fff;line-height: 70px;}
+.shadow{box-shadow: 5px 5px 15px;}
+.top{
+	height:114px;
+}
+.main_width{
+	width:1100px;
+	height:auto;
+}
+.top input,.top button{
+	height:52px;
+	margin-top: 31px;
+}
+input[type="text"]{
+	width:272px;
+	height: 52px;
+	border:solid 2px #c8c8c8;
+	margin-top: 30px;
+	font-size: 16px;
+}
+input[type="submit"]{
+	width:115px;
+	height:52px;
+	border:solid 2px #c8c8c8;
+	background-color: #fff;
+	font-size: 16px;
+	margin-top: 30px;
+	margin-left: -6px;
+}
+.nav_style{
+	height:79px;
+	background-color: #1ccba8;
+	border-bottom: solid 9px #fff221;
+}
+.nav_style ul{width:1100px;}
+.nav_style li{float: left;width:135px;list-style: none;}
+.main_width .left{
+	background-color: #c8c8c8;
+	width:752px;
+	height:600px;
+	margin-top: 50px;
+	float:left;
+}
+.left_title{
+	width:167px;
+	height:40px;
+	font-size:35px;
+	line-height:40px;
+	padding-left:10px;
+	border-left:solid 8px #1abc9c;
+	margin-top: 28px;
+	margin-left: 36px;
+}
+.main_width .right{
+	background-color: #c8c8c8;
+	margin-left:38px;
+	width:308px;
+	height:600px;
+	margin-top: 50px;
+	float:left;
+}
+.right_title{
+	width:100%;
+	height:40px;
+	font-size:35px;
+	line-height:40px;
+	margin-top: 26px;
+	padding-left: 30px;
+}
+.right_title span{color:#1abc9c;font-size:30px;line-height: 35px;margin-right: 10px;}
+.phone_number{
+	height:64px;
+	margin-top: 56px;
+	background-color: #20d7b3;
+	color:#787878;
+	font-size:28px;
+	line-height:58px; 
+}
+.phone_number span{color:#fff;font-size:30px;line-height: 58px;margin-right: 10px;}
+.footer{
+	height:195px;
+	background-color: #1abc9c;
+}
+.footer_logo{
+	float: left;
+	width:242px;
+	height:43px;
+	margin-top: 70px;
+}
+.footer_address{
+	float: left;
+	width:300px;
+	font-size: 24px;
+	line-height: 28px;
+	color: #fff;
+	margin-left: 58px;
+	margin-top: 45px;
+}
+.footer_guanzhu{
+	font-size: 24px;
+	line-height: 28px;
+	color: #fff;
+	margin-top:30px;
+}
