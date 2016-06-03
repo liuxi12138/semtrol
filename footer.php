@@ -1,7 +1,12 @@
 <?php
 wp_footer();
 ?>
-
+		<div class="row phone_number text-center">
+			<div class="main_width">
+				<div class="col-md-6 col-sm-6 col-xs-6"><span class="glyphicon glyphicon-earphone"></span>0533-2781869</div>
+				<div class="col-md-6 col-sm-6 col-xs-6"><span class="glyphicon glyphicon-earphone"></span>13864345076</div>
+			</div>
+		</div>
 		<div class="row footer">
 			<div class="main_width">
 				<div class="col-md-8">

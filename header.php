@@ -25,3 +25,18 @@
 	<?php wp_head();?>
 </head>
 <body>
+		<div class="row top">
+			<div class="main_width">
+				<div class="col-sm-6">
+					<div style="width:376px;height:105px;">
+						<img src="<?php echo bloginfo(template_url);?>/images/logo.jpg" alt="">
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<?php include(TEMPLATEPATH.'/searchform.php');?>
+				</div>
+			</div>
+		</div>
+		<div class="row nav_style">
+			<?php wp_nav_menu( array( 'menu' => 'mymenu', 'depth' => 1) );?>
+		</div>

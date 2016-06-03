@@ -3,34 +3,6 @@ if($_GET['tpl']=="die")
 	die($template);
 ?>
 <?php get_header();?>
-		<div class="row top">
-			<div class="main_width">
-				<div class="col-sm-6">
-					<div style="width:376px;height:105px;">
-						<img src="<?php echo bloginfo(template_url);?>/images/logo.jpg" alt="">
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<input type="text" placeholder="请输入关键词搜索">
-					<input type="submit" value="搜索">
-				</div>
-			</div>
-		</div>
-		<div class="row nav_style">
-			<ul class="text-center">
-				<li><a href="">首页</a></li>
-				<li><a href="">公司简介</a></li>
-				<li><a href="">产品中心</a></li>
-				<li><a href="">应用</a></li>
-				<li><a href="">资料下载</a></li>
-				<li><a href="">关于我们</a></li>
-			</ul>
-			
-                <?php if(have_posts()) : ?>
-                    <?php if ( is_home() && ! is_front_page() ) : ?>
-                    <!-- code -->
-                <?php endif;endif; ?>
-		</div>
 		<div class="row">
 			<div style="width:1100px;">
 				<div class="shadow">
@@ -83,18 +55,16 @@ if($_GET['tpl']=="die")
 					<div class="left_title">
 						<p>产品展示</p>
 					</div>
-				</div>
-				<div class="right shadow">
-					<div class="right_title">
-						<p><span class="glyphicon glyphicon-exclamation-sign"></span>最新动态</p>
+					<div style="width:100%;height:auto;">
+
+		                <?php if(have_posts()) : ?>
+		                    <?php while(have_posts()):the_post();?>
+		                    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		                    	<?php the_content();?>
+		                <?php endwhile;endif; ?>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="row phone_number text-center">
-			<div class="main_width">
-				<div class="col-md-6"><span class="glyphicon glyphicon-earphone"></span>0533-2781869</div>
-				<div class="col-md-6"><span class="glyphicon glyphicon-earphone"></span>13864345076</div>
+				<?php get_sidebar(); ?>
 			</div>
 		</div>
 <?php get_footer();?>

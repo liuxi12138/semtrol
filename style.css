@@ -11,6 +11,7 @@ img{width:100%;height:auto;}
 div,ul,li{height: 100%;}
 a:hover{color:#8e8e8e;text-decoration: none;}
 li a{font-size:24px;color:#fff;line-height: 70px;}
+.row{min-width: 1200px;}
 .shadow{box-shadow: 5px 5px 15px;}
 .top{
 	height:114px;
@@ -46,6 +47,7 @@ input[type="submit"]{
 }
 .nav_style ul{width:1100px;}
 .nav_style li{float: left;width:135px;list-style: none;}
+.nav_style li a{text-align: center;display: block;}
 .main_width .left{
 	background-color: #c8c8c8;
 	width:752px;
