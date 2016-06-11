@@ -29,7 +29,7 @@
 			<div class="main_width">
 				<div class="col-sm-6">
 					<div style="width:376px;height:105px;">
-						<img src="<?php echo bloginfo(template_url);?>/images/logo.jpg" alt="">
+						<img width="376" height="105" src="<?php echo bloginfo(template_url);?>/images/logo.jpg" alt="">
 					</div>
 				</div>
 				<div class="col-sm-6">

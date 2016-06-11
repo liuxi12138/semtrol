@@ -56,12 +56,15 @@ if($_GET['tpl']=="die")
 						<p>产品展示</p>
 					</div>
 					<div style="width:100%;height:auto;">
-
-		                <?php if(have_posts()) : ?>
-		                    <?php while(have_posts()):the_post();?>
-		                    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-		                    	<?php the_content();?>
-		                <?php endwhile;endif; ?>
+						<?php while(have_posts()):the_post();?>
+						<?php if ( has_post_thumbnail()){ ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+						<?php the_post_thumbnail(); ?>
+						</a>
+						<?php } else {?>
+						<img src="<?php echo bloginfo(template_url);?>/images/carousal.jpg" alt="...">
+						<?php } 
+							endwhile;?>
 					</div>
 				</div>
 				<?php get_sidebar(); ?>

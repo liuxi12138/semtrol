@@ -1,4 +1,6 @@
 <?php get_header();?>
-<?php echo $template;?>
-<?php echo "分类归档";?>
+<div class="main_width">
+	<?php echo $template;?>
+	<?php echo "分类归档";?>
+</div>
 <?php get_footer();?>
