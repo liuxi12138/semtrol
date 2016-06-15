@@ -22,7 +22,7 @@
 								if (has_post_thumbnail()){ ?>
 							    <div class="item active">
 									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-										<?php the_post_thumbnail(array(1100,267,false)); $i++;?>
+										<?php the_post_thumbnail('first'); $i++;?>
 									</a>
 									<div class="carousel-caption">
 										<!--这里书写图片的配文，会居中的-->
@@ -36,7 +36,7 @@
 								if (has_post_thumbnail()){ ?>
 							    <div class="item">
 									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-										<?php the_post_thumbnail(array(1100,267,false)); $i++;?>
+										<?php the_post_thumbnail('first'); $i++;?>
 									</a>
 									<div class="carousel-caption">
 										<!--这里书写图片的配文，会居中的-->
@@ -67,6 +67,10 @@
 						<p>产品展示</p>
 					</div>
 					<div style="width:100%;height:auto;">
+		                <?php
+		                	$show_id=79;
+		                	echo get_post($show_id)->post_content;
+		                ?>
 					</div>
 				</div>
 				<?php get_sidebar(); ?>

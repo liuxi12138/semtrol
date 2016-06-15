@@ -29,6 +29,8 @@ function post_thumbnail_src(){
 	echo $post_thumbnail_src;
 }
 add_theme_support( "post-thumbnails" );  // 开启文章缩略图
+add_image_size( 'first', 1100, 267, true );//设置顺序:名称、宽度、高度
+add_image_size( 'second', 75, 75, true );
 
 
 function all_img($soContent){            //抓取固定文章里的图片，用于图片轮播
@@ -142,18 +144,18 @@ function cmp_breadcrumbs() {
 /*面包屑导航完*/
 
 function wt_get_category_count($input = '') { //获取指定id的方法
-global $wpdb; 
-if($input == '') { 
-$category = get_the_category(); 
-return $category[0]->category_count; 
-} 
-elseif(is_numeric($input)) { 
-$SQL = "SELECT $wpdb->term_taxonomy.count FROM $wpdb->terms, $wpdb->term_taxonomy WHERE $wpdb->terms.term_id=$wpdb->term_taxonomy.term_id AND $wpdb->term_taxonomy.term_id=$input"; 
-return $wpdb->get_var($SQL); 
-} 
-else { 
-$SQL = "SELECT $wpdb->term_taxonomy.count FROM $wpdb->terms, $wpdb->term_taxonomy WHERE $wpdb->terms.term_id=$wpdb->term_taxonomy.term_id AND $wpdb->terms.slug='$input'"; 
-return $wpdb->get_var($SQL); 
-} 
+	global $wpdb; 
+	if($input == '') { 
+		$category = get_the_category(); 
+		return $category[0]->category_count; 
+	} 
+	elseif(is_numeric($input)) { 
+		$SQL = "SELECT $wpdb->term_taxonomy.count FROM $wpdb->terms, $wpdb->term_taxonomy WHERE $wpdb->terms.term_id=$wpdb->term_taxonomy.term_id AND $wpdb->term_taxonomy.term_id=$input"; 
+		return $wpdb->get_var($SQL); 
+	} 
+	else { 
+		$SQL = "SELECT $wpdb->term_taxonomy.count FROM $wpdb->terms, $wpdb->term_taxonomy WHERE $wpdb->terms.term_id=$wpdb->term_taxonomy.term_id AND $wpdb->terms.slug='$input'"; 
+		return $wpdb->get_var($SQL); 
+	} 
 }
 ?>
