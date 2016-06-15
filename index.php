@@ -11,6 +11,7 @@
 					  </ol>
 
 					  <!-- Wrapper for slides -->
+				<?php if (has_post_thumbnail()){ ?>
 					  <div class="carousel-inner" role="listbox">
 						<?php
 							$i=1;
@@ -58,6 +59,7 @@
 					  </a>
 					</div>
 				</div>
+				<?php }?>
 			</div>
 		</div>
 		<div class="row">
@@ -67,10 +69,16 @@
 						<p>产品展示</p>
 					</div>
 					<div style="width:100%;height:auto;">
-		                <?php
-		                	$show_id=79;
-		                	echo get_post($show_id)->post_content;
-		                ?>
+					<?php
+						$show_id=79;
+						echo get_post($show_id)->post_content;
+
+					?>
+							<?php if(have_posts()) : ?>
+							<?php while(have_posts()):the_post();?>
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								<?php the_content();?>
+							<?php endwhile;endif; ?>
 					</div>
 				</div>
 				<?php get_sidebar(); ?>
@@ -84,9 +92,9 @@
 						<table cellpadding="2" cellspacing="0" border="0">
 							<tr align="center">
 							<?php
-							    $post_id = 75; // 文章ID，可以在WP后台找到
-							    $soContent=get_post($post_id)->post_content;
-							    all_img($soContent);
+								$post_id = 75; // 文章ID，可以在WP后台找到
+								$soContent=get_post($post_id)->post_content;
+								all_img($soContent);
 							?>
 							</tr>
 						</table>
